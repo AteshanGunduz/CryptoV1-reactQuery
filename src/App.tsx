@@ -19,13 +19,13 @@ function App() {
         <nav>
           <ul className='flex font-semibold text-gray-600'>
             <li>
-              <Link to='/'>CyrpotoVola</Link>
+              <Link to='/'>CryptoVola</Link>
             </li>
             <li>
               <Link to='/'>Market</Link>
             </li>
             <li>
-              <Link to='/'>New Cyrpto</Link>
+              <Link to='/'>New Crypto</Link>
             </li>
           </ul>
           <ul>
