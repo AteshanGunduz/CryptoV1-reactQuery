@@ -1,6 +1,6 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import UserContext from "../state/useContext"
-import { QueryClient, useQuery, useQueryClient } from "react-query"
+import { useQuery} from "react-query"
 import { fetchCryptoID } from "../api/api"
 
 

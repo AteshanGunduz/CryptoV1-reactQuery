@@ -2,7 +2,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import './App.css'
 import Display from './components/Display'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import Prices from './components/Prices';
 
 
