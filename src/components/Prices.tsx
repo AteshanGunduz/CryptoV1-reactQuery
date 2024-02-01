@@ -6,6 +6,7 @@ import { useParams } from "react-router"
 
 
 
+
 const Prices = () => {
 
     const {theId}:any = useContext(UserContext)
@@ -26,12 +27,12 @@ const Prices = () => {
       console.log(data);
     
   return (
-    <div>
-       <div className="price-container flex flex-col justify-center items-center font-semibold gap-2 mt-4">
+    <div className="background-price">
+       <div className="price-container flex flex-col justify-center items-center font-semibold gap-2 mt-10">
         <h2>{data.data.symbol}</h2>
         <h4>Price: {data.data.price_24h}</h4>
         <h4>Volume: {data.data.volume_24h}</h4>
-        <h4>Last Trade Price: {data.data.last_trade_price}</h4>
+        <h4>Last: {data.data.last_trade_price}</h4>
         </div>
     </div>
   )

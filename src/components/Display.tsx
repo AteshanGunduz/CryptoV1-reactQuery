@@ -25,8 +25,8 @@ const Display = () => {
       {data?.data.map((cyrpto: any)=>{
         return <div key={cyrpto.symbol} className="text-gray-600 p-1 " >
           <NavLink key={cyrpto.symbol} to={`/prices/${cyrpto.symbol}`} className={({isActive})=>{
-            return isActive ? "text-blue-700" : ""
-          }}><button className="font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</button></NavLink>
+            return isActive ? "text-yellow-300" : "text-white"
+          }}><h2 className=" font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</h2></NavLink>
           </div>
       })}
     </div>

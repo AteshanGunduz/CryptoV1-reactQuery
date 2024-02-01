@@ -2,23 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.app{
+    height: 100vh;
+}
 
 .the-container{
     width: 13%;
-    height: 53rem;
+    height: 35rem;
     display: block;
     overflow-y: scroll;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    z-index: 2;
+    border-radius: 1rem;
     margin-top: 0.4rem;
+
 }
 
+.background-price{
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    margin-right: 6rem;
+    
+    
+}
+
+.background-price button{
+    font-weight: 600;
+    margin: 0 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.background-price button:hover{
+   scale: 1.1;
+}
+
+
+
 .price-container{
-    z-index: 2;
+    font-size: 1.2rem;
+    color: white;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-align: center;
 
 }
 
@@ -37,9 +67,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center/cover;
-    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
 }
 
 nav div{
@@ -62,6 +90,56 @@ li{
     border-radius: 1rem;
     margin: 0 1rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+li:hover{
+    color: gold
+}
+
+.pop-up-menus{
+    position: absolute;
+    top: 6;
+    left: 5rem;
+    z-index: 2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 2rem;
+    
+}
+.big{
+    width: 40%;
+    color: white;
+    font-weight: 900;
+}
+
+.big input{
+    color: gray;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.big input:focus{
+outline: none;
+}
+
+
+
+
+.new-crypto{
+    position: absolute;
+    top: 6;
+    left: 20rem;
+    z-index: 3;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 2rem;
+}
+
+
+.container-market div{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+  
 }
 
 form{
