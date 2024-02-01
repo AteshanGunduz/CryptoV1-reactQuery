@@ -15,7 +15,7 @@ const MyProvider = ({children}:any) => {
   }
 
   const handleLogin = ()=>{
-   setLoginPage(true)
+   setLoginPage(!loginPage)
   }
 
 
