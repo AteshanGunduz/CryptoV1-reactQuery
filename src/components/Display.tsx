@@ -2,7 +2,7 @@ import { useQuery } from "react-query"
 import { fetchCrypto } from "../api/api"
 import { useContext } from "react"
 import UserContext from "../state/useContext"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 
@@ -24,7 +24,9 @@ const Display = () => {
     <div className="the-container flex flex-col justify-evenly items-start gap-2 p-2">
       {data?.data.map((cyrpto: any)=>{
         return <div key={cyrpto.symbol} className="text-gray-600 p-1 " >
-          <Link key={cyrpto.symbol} to={`/prices/${cyrpto.symbol}`} ><button className="font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</button></Link>
+          <NavLink key={cyrpto.symbol} to={`/prices/${cyrpto.symbol}`} className={({isActive})=>{
+            return isActive ? "text-blue-700" : ""
+          }}><button className="font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</button></NavLink>
           </div>
       })}
     </div>

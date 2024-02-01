@@ -38,7 +38,6 @@ function App() {
     <div></div>
     <Outlet/>
     <Display/>
-   
      </div>
    
 </div>
