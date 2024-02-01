@@ -7,16 +7,23 @@ const UserContext = createContext({})
 const MyProvider = ({children}:any) => {
    
   const [theId, setTheId] = useState("BTC-USD")
+  const [loginPage, setLoginPage] = useState(false)
 
  const handleClick = (id:string)=>{
     setTheId(id)
     
   }
 
+  const handleLogin = ()=>{
+   setLoginPage(true)
+  }
+
 
   const valueToShare = {
     handleClick,
-    theId
+    theId,
+    handleLogin,
+    loginPage
   }
 
 
