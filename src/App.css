@@ -2,21 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .the-container{
     width: 13%;
     height: 53rem;
     display: block;
     overflow-y: scroll;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 2;
+    margin-top: 0.4rem;
 }
 
 .price-container{
+    z-index: 2;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 
 button{
+    background: white;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
@@ -31,7 +38,8 @@ nav{
     align-items: center;
     height: 6rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
- 
+    background: url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center/cover;
+    
 }
 
 nav div{
@@ -48,7 +56,12 @@ ul{
 }
 
 li{
-    padding: 1rem;
+    color: white;
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    margin: 0 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 form{
@@ -58,8 +71,8 @@ form{
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 25rem;
-    width: 25rem;
+    height: 100vh;
+    width: 50%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -78,4 +91,15 @@ form input:focus{
 form p{
 
     font-size: 0.9rem;
+}
+
+.foto{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 100vh;
+    width: 50%;
+    background: url("https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center/cover;
+}
+
+.side{
+
 }

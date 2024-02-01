@@ -1,4 +1,5 @@
 import {SubmitHandler, useForm} from "react-hook-form"
+import { Link } from "react-router-dom"
 
 type FormFields = {
     email: string,
@@ -24,7 +25,9 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
 
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="flex">
+   <div className="foto"></div>
+   <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Log-In to your Profile</h2>
         <input {...register("email", {required: "Email is required", validate: (value)=> {if(!value.includes("@")){
           return "Email must include @"
@@ -37,8 +40,10 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
             {isSubmitting ? "Loading" : "Log In"}
         </button>
         {errors.root && <p className="text-red-600">{errors.root.message}</p>}
-        <h4><span className="text-blue-500"><a href="">Sign-up</a></span> to have an account</h4>
+        <Link to={"/"}><h4><span className="text-blue-500">Sign-up</span> to have an account</h4></Link>
     </form>
+    </div>
+ 
   )
 }
 export default LoginForm

@@ -2,8 +2,7 @@ import { useQuery } from "react-query"
 import { fetchCrypto } from "../api/api"
 import { useContext } from "react"
 import UserContext from "../state/useContext"
-
-
+import { Link } from "react-router-dom"
 
 
 
@@ -11,7 +10,6 @@ const Display = () => {
   const {isLoading, data, isError} = useQuery("cyrpto", fetchCrypto)
   const {handleClick}:any = useContext(UserContext)
   
-
 
   if (isLoading) {
       return <h2>Loading...</h2>
@@ -21,15 +19,12 @@ const Display = () => {
       return <h2>There is a Problem 💩</h2>
     }
   
- 
-
-
 
   return (
     <div className="the-container flex flex-col justify-evenly items-start gap-2 p-2">
       {data?.data.map((cyrpto: any)=>{
         return <div key={cyrpto.symbol} className="text-gray-600 p-1 " >
-          <button className="font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</button>
+          <Link key={cyrpto.symbol} to={`/prices/${cyrpto.symbol}`} ><button className="font-semibold p-3" onClick={()=>handleClick(cyrpto.symbol)}>{cyrpto.symbol}</button></Link>
           </div>
       })}
     </div>
