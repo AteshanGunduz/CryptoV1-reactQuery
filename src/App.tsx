@@ -1,18 +1,15 @@
 
-import { QueryClient, QueryClientProvider } from 'react-query'
 import './App.css'
 import Display from './components/Display'
-import { BrowserRouter, Link, createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Prices from './components/Prices';
+import { Link, Outlet } from 'react-router-dom';
 import { useContext } from 'react';
 import UserContext from './state/useContext';
-import LoginForm from './components/LoginForm';
 
 
 
 function App() {
 
-  const {handleLogin, loginPage}:any = useContext(UserContext)
+  const {handleLogin}:any = useContext(UserContext)
 
 
 
