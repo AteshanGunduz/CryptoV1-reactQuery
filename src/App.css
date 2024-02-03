@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.app{
-    height: 100vh;
-}
+
 
 .the-container{
     width: 13%;
-    height: 35rem;
+    height: 30rem;
     display: block;
     overflow-y: scroll;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 1rem;
     margin-top: 0.4rem;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 
+
+}
+
+.the-container::-webkit-scrollbar{
+    display: none;
 }
 
 .background-price{
@@ -25,9 +30,7 @@
     justify-content: center;
     align-items: center;
     z-index: 0;
-    margin-right: 6rem;
-    
-    
+    margin-right: 6rem;   
 }
 
 .background-price button{
@@ -40,6 +43,24 @@
    scale: 1.1;
 }
 
+.codes{
+    width: 10rem;
+    height: 13rem;
+    display: block;
+    overflow-y: scroll;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    font-size: 1.4rem;
+    position: absolute;
+    z-index: 2;
+   
+}
+
+.codes::-webkit-scrollbar{
+    display: none;
+}
 
 
 .price-container{
@@ -47,26 +68,16 @@
     color: white;
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     text-align: center;
-
+    
 }
 
-button{
-    background: white;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-}
-
-button:hover{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 5rem;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    
 }
 
@@ -76,7 +87,7 @@ nav div{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     width: 50px;
     height: 50px;
-    background: url("https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=50&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: url("https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=50&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
 }
 
 ul{
@@ -89,7 +100,6 @@ li{
     font-size: 1.2rem;
     border-radius: 1rem;
     margin: 0 1rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 li:hover{
@@ -109,14 +119,55 @@ li:hover{
     width: 40%;
     color: white;
     font-weight: 900;
+    position: relative;
 }
 
 .big input{
     color: gray;
     border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 0.2rem 1rem;
+    border: none;
+    width: 13rem;
+    
+
 }
+.more-prices-container{
+    height: 6rem;
+    width:  100%rem;
+    display: block;
+    overflow:scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.phone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    width: 22rem;
+    border: black 3px solid;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: grey;
+    border-radius: 1rem;
+}
+
+.phone:hover{
+    border: goldenrod 3px solid;
+}
+
+.phone select{
+    width: 7rem;
+}
+.phone select:focus{
+   outline: none;
+}
+
 
 .big input:focus{
 outline: none;

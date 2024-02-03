@@ -7,6 +7,7 @@ import UserContext from './state/useContext';
 import Market from './components/Market';
 import NewCrypto from './components/NewCrypto';
 import Promotion from './components/Promotion';
+import MorePrices from './components/MorePrices';
 
 
 
@@ -47,6 +48,7 @@ function App() {
     <Outlet/>
     <Display/>
      </div>
+     <MorePrices/>
    
 </div>
    
