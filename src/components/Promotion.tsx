@@ -48,9 +48,9 @@ const Promotion = () => {
         <h2> Users</h2>
         </div>
 
-        <div className="phone text-gray-600 text-xl">
+        <div className="phone text-gray-600 text-lg">
         <button onClick={handleCustomSelect}>{selectedDial? selectedDial : "Dial Code" }</button>
-        <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Phone Number" maxLength={10} className="text-xl"/>
+        <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Phone Number" maxLength={10} className="text-lg"/>
         </div>
 
         {isSelect && ( <div className="codes flex flex-col justif-center items-center bg-gray-900">

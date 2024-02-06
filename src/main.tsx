@@ -8,7 +8,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { NotFoundPage } from './pages/NotFoundPage.tsx'
 import Prices from './components/Prices.tsx'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import LoginForm from './components/LoginForm.tsx'
+import LoginForm from './pages/LoginForm.tsx'
+import Trade from './pages/Trade.tsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([{
   {
     path: "/login",
     element: <LoginForm/>
+  },
+  {
+    path: "/trade",
+    element: <Trade/>
   }
 ])
 
