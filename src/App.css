@@ -73,6 +73,10 @@
     
 }
 
+a:hover{
+    color: yellow;
+}
+
 
 nav{
     display: flex;
@@ -129,8 +133,46 @@ li:hover{
     padding: 0.2rem 1rem;
     border: none;
     width: 13rem;
-    
+}
 
+.price-con{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 1rem;
+}
+
+.price-con h2{
+    width: 10rem;
+}
+
+
+
+
+
+.side-coin:hover{
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nav-text{
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.trade-nav h2{
+    padding:0.3rem 0.5rem;
+    border-radius: 1rem;
+}
+
+.trade-nav h2:hover{
+  cursor: pointer;
+  background: rgba(58, 58, 58, 0.305);
+}
+
+.coin-box{
+    width: 20rem;
 }
 
 .coin-container div{
@@ -274,4 +316,127 @@ align-items: center;
     height: 100vh;
     width: 50%;
     background: url("https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center/cover;
+}
+
+
+@media (max-width: 1378px){
+  .coin-container{
+    flex-direction: column;
+  }
+
+  .trade-nav{
+    display: none;
+  }
+
+  .con-nav{
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1224px){
+   .price-con{
+    justify-content: center;
+    width: 15rem;
+    padding: 0;
+    margin: 0;
+   }
+
+   .price-con img{
+    width: 15px;
+    height: 15px;
+   }
+   .side-coin{
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+   }
+
+   .side-coin h2{
+    width: 5rem;
+    padding: 0;
+    margin: 0;
+   }
+
+   .side-coin div{
+   width: 5rem;
+    padding: 0;
+    margin: 0;
+   }
+  }
+  
+
+
+
+@media (max-width: 1165px){
+    .background-price{
+        display: none;
+    }
+
+    .the-container{
+        display: none;
+    }
+
+    .side{
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 804px){
+    nav{
+        justify-content: center;
+    }
+    li{
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+.li1{
+    display: none;
+}
+.li2{
+    display: none;
+}
+.nav-text{
+    display: none;
+}
+.price-con{
+    width: 8rem;
+    font-size: 0.5rem;
+   }
+
+   .price-con img{
+    width: 8px;
+    height: 8px;
+   }
+   .side-coin{
+     padding: 0;
+     margin: 0;
+   }
+
+   .side-coin h2{
+    width:1rem;
+
+   }
+
+   .side-coin div{
+   width: 1rem
+ 
+   }
+}
+
+@media (max-width: 640px){
+    .login-con{
+        justify-content: center;
+    }
+    form{
+        width: 100%;
+    }
+   .foto{
+    display: none;
+   }
 }

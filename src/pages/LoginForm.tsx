@@ -25,7 +25,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
 
 
   return (
-    <div className="flex">
+    <div className="flex login-con">
    <div className="foto"></div>
    <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Log-In to your Profile</h2>
@@ -40,7 +40,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
             {isSubmitting ? "Loading" : "Log In"}
         </button>
         {errors.root && <p className="text-red-600">{errors.root.message}</p>}
-        <Link to={"/"}><h4><span className="text-blue-500">Sign-up</span> to have an account</h4></Link>
+        <Link to={"/"}><h4  className="text-gray-700"><span className="text-blue-500">Sign-up</span> to have an account</h4></Link>
     </form>
     </div>
  

@@ -1,9 +1,9 @@
 const TradeNav = () => {
   return (
-    <div className="m-10">
-        <div className="flex flex-col">
-            <div className="flex justify-between">
-                <div className="flex gap-10">
+    <div className="m-5">
+        <div className="trade-nav flex flex-col font-semibold">
+            <div className="flex justify-between ">
+                <div className="flex gap-5 m-2">
                     <h2>Favorites</h2>
                     <h2>All Cryptos</h2>
                     <h2>Spot/Margin</h2>
@@ -11,9 +11,9 @@ const TradeNav = () => {
                     <h2>New Listing</h2>
                     <h2>Zones</h2>
                 </div>
-                <h2>🔎</h2>
+                <button>🔎</button>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 m-2 ">
                 <h2>All</h2>
                 <h2>Layer1</h2>
                 <h2>Metaverse</h2>

@@ -16,13 +16,13 @@ const Navbar = () => {
     <div >
     <nav>
       <ul className='flex font-semibold text-gray-600'>
-        <li >
+        <li className="li1" >
           <Link to='/'>CryptoVola</Link>
         </li>
         <li onMouseEnter={() => setMarket(true)}>
           <Link to='/trade'>Market</Link>
         </li>
-        <li onMouseEnter={() => setNewCrypto(true)}>
+        <li className="li2" onMouseEnter={() => setNewCrypto(true)}>
           <Link to='/'>New Crypto</Link>
         </li>
       </ul>
