@@ -60,7 +60,7 @@ const TradeGoods = () => {
         </div>
           {data.map((coin:any)=>{
             return <div className="side-coin flex gap-10 p-3 pr-10 pl-10 justify-between">
-              <div className="flex gap-3">
+              <div className="flex gap-3 ">
              <img src={`https://assets.coincap.io/assets/icons/${(coin).symbol.toLowerCase()}@2x.png`} width="30px"/>
             <h2>{coin.symbol}</h2>
             </div>
