@@ -19,7 +19,7 @@ const MorePrices = () => {
   return (
     <div className="more-prices-container text-white gap-4">
        {data.data.map((cyrpto:any)=>{
-        return <div className="flex flex-col">
+        return <div className="flex flex-col" key={crypto.randomUUID()}>
             <div>{cyrpto.symbol}/USD</div>
             <div>{parseFloat(cyrpto.quotes.USD.price).toFixed(4)}</div>
         </div>
