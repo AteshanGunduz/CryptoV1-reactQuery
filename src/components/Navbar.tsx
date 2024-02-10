@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to='/trade'>Market</Link>
         </li>
         <li className="li2" onMouseEnter={() => setNewCrypto(true)}>
-          <Link to='/'>New Crypto</Link>
+          <Link to='/trade'>New Crypto</Link>
         </li>
       </ul>
       <ul  className='flex'>

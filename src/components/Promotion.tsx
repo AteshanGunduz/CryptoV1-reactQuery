@@ -8,6 +8,7 @@ const Promotion = () => {
   const [inputValue, setInputValue] = useState('');
   const [isSelect, setIsSelect] = useState(false)
   const [selectedDial, setSelectedDial] = useState("")
+  const [imgAdd, setImgAdd] = useState("")
 
   const {data, isLoading, isError}:any = useQuery("code", fetchCountryCode)
 
@@ -30,8 +31,9 @@ const Promotion = () => {
   }
 
 
-  const handleDial = (dial1: any,dial:any) =>{
+  const handleDial = (dial1: any,dial:any, img:any) =>{
    setSelectedDial(dial1 + dial)
+   setImgAdd(img)
    setIsSelect(false)
   }
 
@@ -49,13 +51,13 @@ const Promotion = () => {
         </div>
 
         <div className="phone text-gray-600 text-lg">
-        <button onClick={handleCustomSelect}>{selectedDial? selectedDial : "Dial Code" }</button>
+        <button className="flex items-center gap-2 text-sm" onClick={handleCustomSelect}><img src={imgAdd} width="20px" />{selectedDial? selectedDial : "+ 1" }</button>
         <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Phone Number" maxLength={10} className="text-lg"/>
         </div>
 
         {isSelect && ( <div className="codes flex flex-col justif-center items-center bg-gray-900">
         {data.map((phon:any)=>{
-          return <button key={phon.cca2} onClick={()=>handleDial(phon.idd.root, phon.idd && phon.idd.suffixes && phon.idd.suffixes.length > 0 ? phon.idd.suffixes[0] : "")} className="text-white flex items-center gap-1 m-1 hover:bg-transparent">
+          return <button key={phon.cca2} onClick={()=>handleDial(phon.idd.root, phon.idd && phon.idd.suffixes && phon.idd.suffixes.length > 0 ? phon.idd.suffixes[0] : "", phon.flags.png)} className="text-white flex items-center gap-1 m-1 hover:bg-transparent">
             <img src={phon.flags.png}
            width="35px" />
           {phon.idd.root}{phon.idd && phon.idd.suffixes && phon.idd.suffixes.length > 0 ? phon.idd.suffixes[0] : ""}</button>

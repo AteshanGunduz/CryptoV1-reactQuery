@@ -68,16 +68,17 @@ const TradeGoods = () => {
             <h2 className={String(coin.quotes.USD.percent_change_24h).includes("-") ? "text-red-500" : "text-green-500"}>{coin.quotes.USD.percent_change_24h}%</h2> 
             <h2>{formatNumber(parseFloat(coin.quotes.USD.volume_24h).toFixed(0))}</h2>
             <h2>{formatNumber(parseFloat(coin.quotes.USD.market_cap).toFixed(0))}</h2>
-            <div>
+            <div className="flex gap-5">
                 <button>💵</button>
                 <button>🚀</button>
             </div>
             </div>
           })}
         </div>
-        <div className="flex justify-center mr-9" ref={bottomRef}>
-        <button className="p-2" onClick={handleButtonClick}>Show More</button>
+        <div className="flex justify-center mr-9" >
+        <button className="p-2 font-semibold" onClick={handleButtonClick}>Show More</button>
         </div>
+        <div ref={bottomRef}></div>
      
     </div>
   )
