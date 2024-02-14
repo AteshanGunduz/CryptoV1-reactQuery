@@ -3,14 +3,17 @@ import UserContext from "../state/useContext"
 import { Link } from "react-router-dom"
 import Market from "./Market"
 import NewCrypto from "./NewCrypto"
-
+import { useDispatch, useSelector } from "react-redux"
+import { setProfile } from "../features/profileSlice"
 
 const Navbar = () => {
     const [market, setMarket] = useState(false)
     const [newCrypto, setNewCrypto] = useState(false)
   
     const {handleLogin}:any = useContext(UserContext)
-  
+    const profile = useSelector((state:any) => state.formSlice.profile)
+    const dispatch = useDispatch();
+    const formData = useSelector((state: any) => state.formSlice.formData);
 
   return (
     <div >
@@ -27,8 +30,8 @@ const Navbar = () => {
         </li>
       </ul>
       <ul  className='flex'>
-        <Link to={"/login"}><li className='mr-6 p-3 font-semibold' onClick={handleLogin}>Click to Login</li></Link>
-        <div></div>
+        {formData.email === "" ?  <Link to={"/login"}><li className='mr-6 p-3 font-semibold' onClick={handleLogin}>Click to Login</li></Link> : <p className="text-white font-semibold mr-6 p-3">{formData.email}</p> }
+        {formData.email === "" ? <div className="img1"></div> : <div onClick={()=> dispatch(setProfile(!profile))} className="img2"></div>}
       </ul>
     </nav>
     {market && <div onMouseLeave={() => setMarket(false)}><Market/></div>}

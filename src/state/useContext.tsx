@@ -18,6 +18,8 @@ const MyProvider = ({children}:any) => {
    setLoginPage(!loginPage)
   }
 
+  
+
 
   const valueToShare = {
     handleClick,

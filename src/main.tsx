@@ -10,6 +10,9 @@ import Prices from './components/Prices.tsx'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import LoginForm from './pages/LoginForm.tsx'
 import Trade from './pages/Trade.tsx'
+import { Provider } from 'react-redux'
+import { store } from './store/store.ts'
+import SignInForm from './pages/SignInForm.tsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -25,6 +28,10 @@ const router = createBrowserRouter([{
     element: <LoginForm/>
   },
   {
+    path: "/signin",
+    element: <SignInForm/>
+  },
+  {
     path: "/trade",
     element: <Trade/>
   }
@@ -37,9 +44,11 @@ const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
      <MyProvider>
       <RouterProvider router={router}/>
     </MyProvider>
+    </Provider>
     </QueryClientProvider>
   </React.StrictMode>,
 )
