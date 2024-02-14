@@ -473,4 +473,7 @@ align-items: center;
    .foto{
     display: none;
    }
+   .profile-name{
+    display: none;
+   }
 }
