@@ -13,6 +13,14 @@ import Trade from './pages/Trade.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store/store.ts'
 import SignInForm from './pages/SignInForm.tsx'
+import ProfileManager from './pages/ProfileManager.tsx'
+import ProfileRight from './components/ProfileRight.tsx'
+import AccountDetails from './components/AccountDetails.tsx'
+import Deposit from './components/Deposit.tsx'
+import Security from './components/Security.tsx'
+import Swap from './components/Swap.tsx'
+import Withdraw from './components/Withdraw.tsx'
+import Settings from './components/Settings.tsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -34,7 +42,40 @@ const router = createBrowserRouter([{
   {
     path: "/trade",
     element: <Trade/>
-  }
+  },
+  {
+    path: "/profilemanager",
+    element: <ProfileManager/>,
+    children: [{
+      index: true, 
+      element: <ProfileRight/>
+    },
+    {
+      path: "account-details",
+      element: <AccountDetails/>
+    },
+    {
+      path: "deposit",
+      element: <Deposit/>
+    },
+    {
+      path: "security",
+      element: <Security/>
+    },
+    {
+      path: "swap",
+      element: <Swap/>
+    },
+    {
+      path: "withdrawal",
+      element: <Withdraw/>
+    },
+    {
+      path: "settings",
+      element: <Settings/>
+    },
+       ]
+  },
 ])
 
 

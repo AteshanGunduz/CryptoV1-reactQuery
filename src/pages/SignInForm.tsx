@@ -33,6 +33,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
     <div className="flex login-con">
    <div className="foto"></div>
    <form onSubmit={handleSubmit(onSubmit)}>
+       
         <h2>Sign-Up</h2>
         <input {...register("email", {required: "Email is required", validate: (value)=> {if(!value.includes("@")){
           return "Email must include @"

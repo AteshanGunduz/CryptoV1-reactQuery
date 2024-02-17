@@ -4,17 +4,20 @@ import TradeGoods from "../components/TradeGoods"
 import TradeNav from "../components/TradeNav"
 
 import Navbar from "../components/Navbar"
+import { useSelector } from "react-redux"
+import Profiles from "../components/Profiles"
 
 
 
 
 const Trade = () => {
 
-
+  const profile = useSelector((state:any) => state.formSlice.profile);
 
   return (
     <div className="bg-gray-900">
            <Navbar/>
+           {profile && (<Profiles/>)}
     <div className="trade  text-white flex flex-col">
         <div className="trade-container">
         <div className="m-5 font-bold mt-10">

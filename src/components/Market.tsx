@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Market = () => {
   return (
-    <div className='pop-up-menus rounded-lg text-white font-semibold z-10 bg-gray-900'>
+    <div className='pop-up-menus m-1 rounded-lg text-white font-semibold z-10 bg-gray-900'>
         <div className="container-market flex justify-center items-center gap-4">
             <div>
               <Link to={"/trade"}>Spot 🚀</Link>

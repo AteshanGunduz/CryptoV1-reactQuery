@@ -146,8 +146,42 @@ li:hover{
     z-index: 2;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 2rem;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     
 }
+.profiles > * {
+ padding: 0.5rem;
+ }
+
+.profiles > *:hover {
+   cursor: pointer;
+   color: gold;
+}
+
+.profile-left{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap:3.2rem;
+    border-right: 1px solid gray;
+}
+
+.p-con{
+  
+}
+
+.prof-container{
+    width: 90%;
+    margin: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
 
 .big{
     width: 40%;
