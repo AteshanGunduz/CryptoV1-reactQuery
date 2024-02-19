@@ -1,5 +1,5 @@
 import { useQuery } from "react-query"
-import { fetchMorePrices } from "../api/api"
+import { fetchMorePrices } from "../../api/api"
 
 const TradeBoxes = () => {
 

@@ -1,7 +1,7 @@
 import { useQuery } from "react-query"
-import { fetchCrypto } from "../api/api"
+import { fetchCrypto } from "../../api/api"
 import { useContext } from "react"
-import UserContext from "../state/useContext"
+import UserContext from "../../state/useContext"
 import { NavLink } from "react-router-dom"
 
 

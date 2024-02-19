@@ -1,11 +1,11 @@
 
 import './App.css'
-import Display from './components/Display'
+import Display from './components/LoginPage/Display'
 import {Outlet} from 'react-router-dom';
-import Promotion from './components/Promotion';
-import MorePrices from './components/MorePrices';
+import Promotion from './components/LoginPage/Promotion';
+import MorePrices from './components/LoginPage/MorePrices';
 import Navbar from './components/Navbar';
-import Profiles from './components/Profiles';
+import Profiles from './components/Profile/Profiles';
 import { useSelector } from 'react-redux';
 import Charts from './pages/Charts';
 
@@ -20,21 +20,19 @@ function App() {
     <div className='app bg-gray-900'>
     <Navbar/>
     {profile && (<Profiles/>)}
-    <div className='side flex justify-between items-center z-0'>
+   
     {!formData.email ?
-    <div>
+    (<div>
+     <div className='side flex justify-between items-center z-0'>
      <Promotion/>
      <Outlet/>
      <Display/>
-     <MorePrices/>
-    </div>
-    : <Charts/>
-    }
-   
      </div>
-     
-   
-</div>
+     <MorePrices/>
+     </div>
+     ): <Charts/>
+    }  
+   </div>
    
   )
 }

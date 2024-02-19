@@ -1,5 +1,5 @@
 import { UseQueryResult, useQuery, useQueryClient } from "react-query"
-import { fetchTickers } from "../api/api"
+import { fetchTickers } from "../../api/api"
 import { useEffect, useRef, useState } from "react";
 
 const TradeGoods = () => {

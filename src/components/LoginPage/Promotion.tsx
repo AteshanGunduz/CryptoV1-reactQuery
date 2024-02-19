@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 import { useState } from "react";
 import { useQuery } from "react-query";
-import { fetchCountryCode } from "../api/api";
+import { fetchCountryCode } from "../../api/api";
 
 const Promotion = () => {
   const [inputValue, setInputValue] = useState('');

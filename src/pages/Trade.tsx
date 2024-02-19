@@ -1,11 +1,11 @@
 
-import TradeBoxes from "../components/TradeBoxes"
-import TradeGoods from "../components/TradeGoods"
-import TradeNav from "../components/TradeNav"
+import TradeBoxes from "../components/Trade/TradeBoxes"
+import TradeGoods from "../components/Trade/TradeGoods"
+import TradeNav from "../components/Trade/TradeNav"
 
 import Navbar from "../components/Navbar"
 import { useSelector } from "react-redux"
-import Profiles from "../components/Profiles"
+import Profiles from "../components/Profile/Profiles"
 
 
 

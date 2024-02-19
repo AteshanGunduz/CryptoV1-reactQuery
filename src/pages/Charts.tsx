@@ -1,47 +1,23 @@
+import BuySell from "../components/Chart/BuySell"
+import ChartNav from "../components/Chart/ChartNav"
+import OrderBook from "../components/Chart/OrderBook"
+import SideMenu from "../components/Chart/SideMenu"
+import TheChart from "../components/Chart/TheChart"
+import TradeHistory from "../components/Chart/TradeHistory"
+
 const Charts = () => {
   return (
     <div className="text-white flex">
-
-
-
-      <div className="flex flex-col gap-10 border border-gray-500">
-      <h2>SideMenu Left</h2>
-      <p>5 content col</p>
-      <p>5 content col</p>
-      <p>5 content col</p>
-      <p>5 content col</p>
-      <p>5 content col</p>
-      <p>5 content col</p>
-      </div>
-
+      <SideMenu/>
       <div className="flex-col border border-gray-500">
-      <div className="flex gap-10 border border-gray-500">
-        <button>BTC-USD</button>
-        <p> data.map row</p>
-        <p> data.map row</p>
-        <p> data.map row</p>
-        <p> data.map row</p>
-      
-      </div>
+      <ChartNav/>
       <main className="flex gap-1">
-        <div className="border border-gray-500">CHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHART</div>
-        <div className="border border-gray-500">orderbookorderbookorderbookorderbook</div>
-        <div className="border border-gray-500">Trade historyTrade historyTrade history</div>
-        <div className="border border-gray-500">Buy sellBuy sellBuy sellBuy </div>
+        <TheChart/>
+        <OrderBook/>
+        <TradeHistory/>
+        <BuySell/>
       </main>
-
       </div>
-
-
-
-
-
-
-
-     
-    
-     
-
     </div>
   )
 }

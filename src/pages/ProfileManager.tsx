@@ -1,7 +1,7 @@
 
 import { Outlet } from "react-router"
 import Navbar from "../components/Navbar"
-import ProfileLeft from "../components/ProfileLeft"
+import ProfileLeft from "../components/Profile/ProfileLeft"
 
 
 

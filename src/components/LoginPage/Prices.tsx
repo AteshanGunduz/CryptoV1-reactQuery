@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import UserContext from "../state/useContext"
+import UserContext from "../../state/useContext"
 import { useQuery} from "react-query"
-import { fetchCryptoID } from "../api/api"
+import { fetchCryptoID } from "../../api/api"
 import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 
