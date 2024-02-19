@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { clearFormData, setProfile } from "../features/profileSlice";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Profiles = () => {
 
