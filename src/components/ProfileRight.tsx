@@ -8,23 +8,31 @@ const ProfileRight = () => {
 
   return (
     <div className="text-white m-10 flex flex-col items-center w-full ">
-      <div className="flex flex-col items-center gap-4">
-        <div className=" flex flex-col gap-4 justify-center">
+      <div className="flex items-center justify-center items-center gap-4 w-full">
+        <div className=" flex  gap-4 justify-center items-center">
         <div className="img2"></div>
-         <button>Change Avatar</button>
-        </div>
         <h2>{formData.email}</h2>
+        </div>
+        <button>Change Avatar</button>
         </div>
       <div>
       </div>
 
-      <div className="flex flex-col gap-4 m-10">
-      <label htmlFor="">Change Email</label>
-      <input type="text" />
-      <label htmlFor="">Change UserName</label>
-      <input type="text" />
+      <div className="mt-10 flex flex-col gap-5 w-full">
+      <div>Profile Info</div>
+      <div className="flex justify-between"><h2>Display Name</h2> <p>name</p></div>
+      <div className="flex justify-between"><h2>Email Address</h2><p>{formData.email}</p></div>
+      <div className="flex justify-between items-center">
+        <div>
+          <h2>Crypto Addresses</h2>
+          <p>For Individual and Exchange Accounts</p>
+        </div>
+        map.account crypto images
       </div>
-      
+      </div>
+    
+
+  
   
       </div>
   )
