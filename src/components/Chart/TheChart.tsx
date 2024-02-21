@@ -1,4 +1,4 @@
-import TradingWiew from "../TradingWiew"
+
 
 const TheChart = () => {
   return (
