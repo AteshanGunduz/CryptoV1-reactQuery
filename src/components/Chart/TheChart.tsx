@@ -1,6 +1,10 @@
+import TradingWiew from "../TradingWiew"
+
 const TheChart = () => {
   return (
-    <div className="border border-gray-500">CHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHARTCHART</div>
+    <div className="w-full">
+     
+    </div>
   )
 }
 export default TheChart

@@ -1,20 +1,24 @@
+
+
 import BuySell from "../components/Chart/BuySell"
 import ChartNav from "../components/Chart/ChartNav"
-import OrderBook from "../components/Chart/OrderBook"
 import SideMenu from "../components/Chart/SideMenu"
-import TheChart from "../components/Chart/TheChart"
-import TradeHistory from "../components/Chart/TradeHistory"
+import TradingWiew from "../components/TradingWiew"
+
+
 
 const Charts = () => {
+
+
   return (
-    <div className="text-white flex">
+    <div className="text-white flex justify-center relative ">
       <SideMenu/>
       <div className="flex-col border border-gray-500">
       <ChartNav/>
       <main className="flex gap-1">
-        <TheChart/>
-        <OrderBook/>
-        <TradeHistory/>
+        <div className="tradingchart">
+        <TradingWiew/>
+        </div>
         <BuySell/>
       </main>
       </div>

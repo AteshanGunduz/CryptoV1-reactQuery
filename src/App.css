@@ -92,26 +92,34 @@ nav{
 
 .img1{
     margin-right: 3rem;
+    border: 2px solid gray;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    width: 50px;
-    height: 50px;
-    background: url("https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=50&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+    width: 43px;
+    height: 43px;
+    background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100185.jpg?t=st=1708417875~exp=1708421475~hmac=8bbeedce6e87e22b464495b4465af2772dae9be2d8d1f8b9091b53c1e0705b0d&w=740") top center/cover;
 }
 
 .img2{
     margin-right: 3rem;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    width: 50px;
-    height: 50px;
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/d54a51105791269.5f80b1b5e44ee.png") center center/cover;
+    border: 2px solid gray;
+    width: 43px;
+    height: 43px;
+    background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100143.jpg?t=st=1708414942~exp=1708418542~hmac=56be5028047ca4761a5b5b0984a011f3f933cd4ddf11dbba93e4ff5c21fe6b3f&w=740") center center/cover;
 }
 
 .img2:hover{
     scale: 1.1;
     cursor: pointer;
 }
+
+.tradingchart{
+ height: 36rem;
+ width: 70rem;
+}
+
+
 
 ul{
     margin-left: 2rem;
@@ -136,13 +144,14 @@ li:hover{
     z-index: 2;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 2rem;
+    font-size: 0.9rem;
     
 }
 
 .profiles{
     position: absolute;
-    top: 6;
-    right: 0;
+    top: 4.95rem;
+    right:0.1rem;
     z-index: 2;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 2rem;
@@ -324,6 +333,7 @@ outline: none;
     z-index: 3;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 2rem;
+    font-size: 0.9rem;
 }
 
 

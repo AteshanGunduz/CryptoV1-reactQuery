@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Profiles from './components/Profile/Profiles';
 import { useSelector } from 'react-redux';
 import Charts from './pages/Charts';
+import TradingWiew from './components/TradingWiew';
 
 
 
@@ -18,11 +19,10 @@ function App() {
 
   return (
     <div className='app bg-gray-900'>
-    <Navbar/>
     {profile && (<Profiles/>)}
-   
     {!formData.email ?
     (<div>
+      <Navbar/>
      <div className='side flex justify-between items-center z-0'>
      <Promotion/>
      <Outlet/>

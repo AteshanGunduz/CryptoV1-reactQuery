@@ -21,7 +21,7 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
         await new Promise((resovle)=> setTimeout(resovle, 1000))
 
         dispatch(setFormData(data))
-        navigate("/trade")
+        navigate("/")
     } catch (error) {
          setError("root", {message: "This email is already taken"})
     }

@@ -29,8 +29,8 @@ const Navbar = () => {
           <Link to='/trade'>New Crypto</Link>
         </li>
       </ul>
-      <ul  className='flex'>
-        {formData.email === "" ?  <Link to={"/login"}><li className='mr-6 p-3 font-semibold' onClick={handleLogin}>Click to Login</li></Link> : <p className="profile-name text-white font-semibold mr-6 p-3">{formData.email}</p> }
+      <ul  className='flex items-center'>
+        {formData.email === "" ?  <Link to={"/login"}><li className='mr-6 p-3 text-yellow-300 text-lg font-bold hover:text-yellow-200' onClick={handleLogin}>Log In</li></Link> : <p className="profile-name text-white font-semibold mr-6 p-3">{formData.email}</p> }
         {formData.email === "" ? <div className="img1"></div> : <div onClick={()=> dispatch(setProfile(!profile))} className="img2"></div>}
       </ul>
     </nav>
