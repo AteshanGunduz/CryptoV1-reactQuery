@@ -21,6 +21,7 @@ import Security from './components/Profile/Security.tsx'
 import Swap from './components/Profile/Swap.tsx'
 import Withdraw from './components/Profile/Withdraw.tsx'
 import Settings from './components/Profile/Settings.tsx'
+import Charts from './pages/Charts.tsx'
 
 const router = createBrowserRouter([{
   path: "/",
@@ -42,6 +43,10 @@ const router = createBrowserRouter([{
   {
     path: "/trade",
     element: <Trade/>
+  },
+  {
+    path: "/charts",
+    element: <Charts/>
   },
   {
     path: "/profilemanager",

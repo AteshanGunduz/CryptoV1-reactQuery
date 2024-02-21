@@ -1,17 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { clearFormData, setProfile } from "../../features/profileSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Profiles = () => {
 
   const profile = useSelector((state:any) => state.formSlice.profile)
 
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
  
     const handleLogOut = ()=>{
       dispatch(clearFormData());
       dispatch(setProfile(!profile))
+      navigate("/")
     }
 
   return (

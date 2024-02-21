@@ -34,3 +34,7 @@ export const fetchTickers = async (start:any, end:any): Promise<any> => {
   const data = await response.json();
   return data;
 };
+
+export const fetchAvatarSeed= async(seed1:string, seed2:string) => {
+  return axios.get(`https://api.dicebear.com/7.x/initials/svg?seed=${seed1+seed2}`)
+}

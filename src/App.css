@@ -97,7 +97,7 @@ nav{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     width: 43px;
     height: 43px;
-    background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100185.jpg?t=st=1708417875~exp=1708421475~hmac=8bbeedce6e87e22b464495b4465af2772dae9be2d8d1f8b9091b53c1e0705b0d&w=740") top center/cover;
+    background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100143.jpg?t=st=1708414942~exp=1708418542~hmac=56be5028047ca4761a5b5b0984a011f3f933cd4ddf11dbba93e4ff5c21fe6b3f&w=740") top center/cover;
 }
 
 .img2{
@@ -106,7 +106,6 @@ nav{
     border: 2px solid gray;
     width: 43px;
     height: 43px;
-    background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100143.jpg?t=st=1708414942~exp=1708418542~hmac=56be5028047ca4761a5b5b0984a011f3f933cd4ddf11dbba93e4ff5c21fe6b3f&w=740") center center/cover;
 }
 
 .img2:hover{
@@ -118,7 +117,6 @@ nav{
  height: 36rem;
  width: 70rem;
 }
-
 
 
 ul{
