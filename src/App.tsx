@@ -11,7 +11,6 @@ import Charts from './pages/Charts';
 
 
 
-
 function App() {
  
   const profile = useSelector((state:any) => state.formSlice.profile);
