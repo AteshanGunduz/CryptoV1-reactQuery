@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Profiles from './components/Profile/Profiles';
 import { useSelector } from 'react-redux';
 import Charts from './pages/Charts';
-import TradingWiew from './components/TradingWiew';
+
 
 
 
