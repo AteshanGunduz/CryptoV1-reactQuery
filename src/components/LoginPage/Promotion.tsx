@@ -66,7 +66,7 @@ const Promotion = () => {
        
 
           <div className="mt-10 text-yellow-300 text-3xl flex items-center gap-5 font-bold">
-          <Link to={"/login"}><h2>💰 Start Trading Now </h2></Link>
+          <Link to={"/signin"}><h2>💰 Start Trading Now </h2></Link>
         </div>
         
         </div>

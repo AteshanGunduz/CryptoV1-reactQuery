@@ -16,7 +16,7 @@ const Profiles = () => {
     }
 
   return (
-    <div className="profiles rounded-lg text-white font-semibold z-10 bg-gray-900">
+    <div className="profiles rounded-lg text-white font-semibold z-10 bg-gray-900" onMouseLeave={()=> dispatch(setProfile(!profile))}>
       <Link to={"/profilemanager"}><h2>Profile Management</h2></Link>
       <Link to={"/profilemanager/account-details"}><h2>Account Details</h2></Link>
       <Link to={"/profilemanager/deposit"}> <h2>Deposit to Wallet</h2></Link>

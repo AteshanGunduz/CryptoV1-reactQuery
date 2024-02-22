@@ -6,6 +6,7 @@ import ChartNav from "../components/Chart/ChartNav"
 import SideMenu from "../components/Chart/SideMenu"
 import Profiles from "../components/Profile/Profiles"
 import TradingWiew from "../components/TradingWiew"
+import TradeHistory from "../components/Chart/TradeHistory"
 
 
 
@@ -18,10 +19,11 @@ const Charts = () => {
       <div className="flex-col  w-full border border-gray-500">
       <ChartNav/>
       {profile && (<Profiles/>)}
-      <main className="flex gap-1">
+      <main className="flex">
         <div className="tradingchart">
         <TradingWiew/>
         </div>
+        <TradeHistory/>
         <BuySell/>
       </main>
       </div>

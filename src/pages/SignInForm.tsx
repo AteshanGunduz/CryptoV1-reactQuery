@@ -7,7 +7,8 @@ type FormFields = {
     firstName: string,
     lastName:string,
     email: string,
-    password: string
+    password: string,
+    phone: string
 }
 
 
@@ -41,15 +42,25 @@ const onSubmit: SubmitHandler<FormFields> = async (data)=>{
         return "Please Enter a valid name";
         } return true
         }})}type="text" placeholder="First Name" />
-
         {errors.firstName && <p className="text-red-600">{errors.firstName.message}</p>}
+
+
         <input {...register("lastName", {required:"Last Name is required", validate: (value)=> {if (!/^[a-zA-Z]+$/.test(value)) {
         return "Please Enter a valid last name";
         } return true
         }})}type="text" placeholder="Last Name" />
-
-
         {errors.lastName && <p className="text-red-600">{errors.lastName.message}</p>}
+
+
+        
+        <input {...register("phone", {required:"Phone Number is required", validate: (value)=> { if (!/^\d{1,10}$/.test(value)){
+        return "Please Enter a valid Phone Number";
+        } return true
+        }})}type="text" placeholder="Phone Number" maxLength={10} />
+        {errors.phone && <p className="text-red-600">{errors.phone.message}</p>}
+
+
+
         <input {...register("email", {required: "Email is required", validate: (value)=> {if(!value.includes("@")){
           return "Email must include @"
         } return true

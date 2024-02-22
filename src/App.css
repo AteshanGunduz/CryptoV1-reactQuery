@@ -73,7 +73,18 @@
     
 }
 
+.history{
+    height: 40.5rem;
+    width: 17%;
+    display: block;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
 
+.bsell{
+    width: 25%;
+}
 
 
 a:hover{
@@ -114,8 +125,8 @@ nav{
 }
 
 .tradingchart{
- height: 36rem;
- width: 70rem;
+ height: 30rem;
+ width: 50%;
 }
 
 
@@ -178,9 +189,7 @@ li:hover{
     border-right: 1px solid gray;
 }
 
-.p-con{
-  
-}
+
 
 .prof-container{
     width: 90%;
