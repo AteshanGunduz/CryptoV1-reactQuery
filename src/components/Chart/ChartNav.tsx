@@ -21,9 +21,10 @@ const ChartNav = () => {
     return <h2>There is a Problem 💩</h2>
   }
 
-  console.log(data);
+  
+
   return (
-    <nav className=" flex items-center justify-between border border-gray-500 font-semibold">
+    <nav className=" flex items-center justify-between  font-semibold">
       <div className="flex items-center gap-10 p-5">
         <button className="bg-gray-800 p-3 hover:bg-gray-700 rounded-xl">BTC-USD</button>
         <p> data.map row</p>

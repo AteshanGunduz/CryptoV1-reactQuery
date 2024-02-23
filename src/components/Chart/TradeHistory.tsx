@@ -16,7 +16,7 @@ const TradeHistory = () => {
   
 
   return (
-    <div className="history border text-white border-gray-500 flex flex-col p-1">
+    <div className="history  text-white  flex flex-col p-1">
 
     <div className="font-semibold p-1 text-sm">Trade History</div>
     <div className="flex justify-around gap-8">

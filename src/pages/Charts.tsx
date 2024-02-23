@@ -7,6 +7,7 @@ import SideMenu from "../components/Chart/SideMenu"
 import Profiles from "../components/Profile/Profiles"
 import TradingWiew from "../components/TradingWiew"
 import TradeHistory from "../components/Chart/TradeHistory"
+import Orders from "../components/Chart/Orders"
 
 
 
@@ -20,8 +21,9 @@ const Charts = () => {
       <ChartNav/>
       {profile && (<Profiles/>)}
       <main className="flex">
-        <div className="tradingchart">
+        <div className="tradingchart flex flex-col">
         <TradingWiew/>
+        <Orders/>
         </div>
         <TradeHistory/>
         <BuySell/>

@@ -5,6 +5,9 @@ import Market from "./Market"
 import NewCrypto from "./NewCrypto"
 import { useDispatch, useSelector } from "react-redux"
 import { setProfile } from "../features/profileSlice"
+import { useQuery } from "react-query"
+import { fetchAvatarSeed } from "../api/api"
+
 
 const Navbar = () => {
     const [market, setMarket] = useState(false)
@@ -14,6 +17,8 @@ const Navbar = () => {
     const profile = useSelector((state:any) => state.formSlice.profile)
     const dispatch = useDispatch();
     const formData = useSelector((state: any) => state.formSlice.formData);
+    const { data}:any = useQuery(["seed"], ()=>fetchAvatarSeed(formData.firstName.slice(0,1),formData.lastName.slice(0,1)))
+
 
   return (
     <div >
@@ -31,7 +36,7 @@ const Navbar = () => {
       </ul>
       <ul  className='flex items-center'>
         {formData.email === "" ?  <Link to={"/login"}><li className='mr-6 p-3 text-yellow-300 text-lg font-bold hover:text-yellow-200' onClick={handleLogin}>Log In</li></Link> : <p className="profile-name text-white font-semibold mr-6 p-3">{formData.email}</p> }
-        {formData.email === "" ? <div className="img1"></div> : <div onClick={()=> dispatch(setProfile(!profile))} className="img2"></div>}
+        {formData.email === "" ? <div className="img1"></div> : <img onClick={()=> dispatch(setProfile(!profile))} className="img2" src={data.config.url} ></img>}
       </ul>
     </nav>
     {market && <div onMouseLeave={() => setMarket(false)}><Market/></div>}

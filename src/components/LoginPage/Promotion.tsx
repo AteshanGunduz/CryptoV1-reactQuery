@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import { fetchCountryCode } from "../../api/api";
 
+
 const Promotion = () => {
   const [inputValue, setInputValue] = useState('');
   const [isSelect, setIsSelect] = useState(false)
@@ -19,6 +20,8 @@ const Promotion = () => {
   if (isError) {
     return <div>Error fetching data</div>
   }
+
+
 
   const handleInputChange = (e: any) => {
     const numericValue = e.target.value.replace(/[^0-9]/g, '');

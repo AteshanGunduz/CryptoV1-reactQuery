@@ -1,11 +1,11 @@
 const BuySell = () => {
   return (
-    <div className="bsell border border-gray-500 flex flex-col gap-5 items-center p-2">
+    <div className="bsell flex flex-col gap-5 items-center p-2 font-semibold text-sm">
 
       <h2>USD-BTC</h2>
     
-      <div className="flex gap-2 justify-center">
-        <button>Buy</button><button>Sell</button>
+      <div className="flex gap-2 justify-center w-full">
+        <button className="p-4 bg-gray-500">Buy</button><button className="p-4 bg-gray-500">Sell</button>
       </div>
 
       <div className="flex flex-col items-center gap-5">
