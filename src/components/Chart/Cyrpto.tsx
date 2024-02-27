@@ -10,7 +10,7 @@ const Cyrpto = () => {
 
     const {data: coin}:any = useQuery(["morePrices", Cid],()=> fetchMorePricesID(Cid))
 
-   
+
     
 
 
