@@ -1,6 +1,6 @@
 const Orders = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 font-semibold text-sm">
         <div className="flex justify-evenly">
             <h2>Orders</h2>
             <button>Cancel all</button>
@@ -8,7 +8,7 @@ const Orders = () => {
             <button>All Markets</button>
             <button>All Statuses</button>
         </div>
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly text-xs text-gray-200">
             <p>TIME PLACED</p>
             <p>NAME</p>
             <p>TYPE</p>
@@ -19,7 +19,7 @@ const Orders = () => {
             <p>TOTAL</p>
             <p>STATUS</p>
         </div>
-        <div className="flex justify-center items-center text-2xl">💹</div>
+        <div className="flex justify-center items-center text-2xl"><p>💹</p></div>
 
     </div>
   )

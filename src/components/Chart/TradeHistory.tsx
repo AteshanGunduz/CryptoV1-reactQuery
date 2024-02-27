@@ -4,6 +4,8 @@ import { fetchMorePrices } from "../../api/api"
 const TradeHistory = () => {
 
   const {isLoading, data, isError}:any = useQuery(["morePrices"], fetchMorePrices)
+
+
   
   if (isLoading) {
     return <h2></h2>
@@ -19,7 +21,7 @@ const TradeHistory = () => {
     <div className="history  text-white  flex flex-col p-1">
 
     <div className="font-semibold p-1 text-sm">Trade History</div>
-    <div className="flex justify-around gap-8">
+    <div className="flex justify-around gap-8 font-semibold text-xs text-gray-200">
       <div>AMOUNT</div>
       <div>PRICE</div>
       <div>TIME</div>

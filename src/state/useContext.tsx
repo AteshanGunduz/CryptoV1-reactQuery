@@ -8,6 +8,8 @@ const MyProvider = ({children}:any) => {
    
   const [theId, setTheId] = useState("BTC-USD")
   const [loginPage, setLoginPage] = useState(false)
+  const [Cid, setCid] = useState("")
+  const [toggle, setToggle] = useState(false)
 
  const handleClick = (id:string)=>{
     setTheId(id)
@@ -18,6 +20,15 @@ const MyProvider = ({children}:any) => {
    setLoginPage(!loginPage)
   }
 
+  const handleCyrptoToggle = ()=>{
+    setToggle(!toggle)
+  }
+
+  const handelCyrptoClick = (id:string)=>{
+    setCid(id)
+    setToggle(false)
+  }
+
   
 
 
@@ -25,7 +36,11 @@ const MyProvider = ({children}:any) => {
     handleClick,
     theId,
     handleLogin,
-    loginPage
+    loginPage,
+    Cid,
+    handelCyrptoClick,
+    handleCyrptoToggle,
+    toggle
   }
 
 

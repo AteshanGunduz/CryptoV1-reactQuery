@@ -1,11 +1,24 @@
+import { useContext } from "react"
+import { useQuery } from "react-query"
+import UserContext from "../../state/useContext"
+import { fetchMorePricesID } from "../../api/api"
+
+
+
 const BuySell = () => {
+
+  const {Cid}:any = useContext(UserContext)
+  const {data: coin}:any = useQuery(["morePrices", Cid],()=> fetchMorePricesID(Cid))
+
+
+
   return (
     <div className="bsell flex flex-col gap-5 items-center p-2 font-semibold text-sm">
 
-      <h2>USD-BTC</h2>
+      <h2 className="flex items-center gap-2"><img src={`https://assets.coincap.io/assets/icons/${coin?.data.symbol.toLowerCase()}@2x.png`} width="30px"/>  <h2>{coin?.data.symbol} / USDC</h2></h2>
     
-      <div className="flex gap-2 justify-center w-full">
-        <button className="p-4 bg-gray-500">Buy</button><button className="p-4 bg-gray-500">Sell</button>
+      <div className="flex  justify-center w-full">
+        <button className="p-4 bg-gray-800 w-full border-t border-green-500 hover:text-green-500">Buy</button><button className="p-4 bg-gray-800 w-full border-t border-red-500 hover:text-red-500">Sell</button>
       </div>
 
       <div className="flex flex-col items-center gap-5">

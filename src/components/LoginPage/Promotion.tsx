@@ -53,9 +53,9 @@ const Promotion = () => {
         <h2> Users</h2>
         </div>
 
-        <div className="phone text-gray-600 text-lg">
-        <button className="flex items-center gap-2 text-sm" onClick={handleCustomSelect}><img src={imgAdd} width="20px" />{selectedDial? selectedDial : "+ 1" }</button>
-        <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Phone Number" maxLength={10} className="text-lg"/>
+        <div className="phone text-gray-600 text-lg relative">
+        <button className="flex items-center gap-2 text-sm " onClick={handleCustomSelect}><img src={imgAdd} width="20px" />{selectedDial? selectedDial :<div className="flex gap-1 absolute left-3"><img className="rounded-md" src={data[12].flags.png} width="30px"/> <p>+44</p></div> }</button>
+        <input type="text" value={inputValue} onChange={handleInputChange} placeholder="  Phone Number" maxLength={10} className="text-lg"/>
         </div>
 
         {isSelect && ( <div className="codes flex flex-col justif-center items-center bg-gray-900">

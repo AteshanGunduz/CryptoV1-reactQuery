@@ -15,10 +15,16 @@ const Charts = () => {
   const profile = useSelector((state:any) => state.formSlice.profile);
 
   return (
-    <div className="charts w-full text-white flex justify-between relative bg-gray-900">
+    <div className="charts w-full text-white flex justify-between relative bg-gray-900 z-0">
       <SideMenu/>
       <div className="flex-col  w-full border border-gray-500">
-      <ChartNav/>
+ 
+   <div>
+   <ChartNav/>
+   </div>
+    
+  
+     
       {profile && (<Profiles/>)}
       <main className="flex">
         <div className="tradingchart flex flex-col">

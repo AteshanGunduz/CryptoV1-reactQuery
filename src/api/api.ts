@@ -28,6 +28,10 @@ export const fetchMorePrices = () => {
   return axios.get("https://api.coinpaprika.com/v1/tickers")
 }
 
+export const fetchMorePricesID = (Cid:string) => {
+  return axios.get(`https://api.coinpaprika.com/v1/tickers/${Cid}`)
+}
+
 
 export const fetchTickers = async (start:any, end:any): Promise<any> => {
   const response = await fetch(`https://api.coinpaprika.com/v1/tickers?start=${start}&limit=${end}`);
