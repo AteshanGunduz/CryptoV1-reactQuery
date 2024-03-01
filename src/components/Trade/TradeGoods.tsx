@@ -47,7 +47,7 @@ const TradeGoods = () => {
   };
 
   return (
-    <div className="price-con m-5 p-2">
+    <div className="price-con m-5 p-2 ">
        
         <div className="flex flex-col gap-3 p-5">
         <div className="con-nav flex gap-10 p-3 pr-10 pl-10 justify-between font-semibold">
@@ -59,7 +59,7 @@ const TradeGoods = () => {
             <div>Action</div>
         </div>
           {data.map((coin:any)=>{
-            return <div className="side-coin flex gap-10 p-3 pr-10 pl-10 justify-between" key={coin.symbol}>
+            return <div className="side-coin flex gap-10 p-3 pr-10 pl-10 justify-between " key={coin.symbol}>
               <div className="flex gap-3 ">
              <img src={`https://assets.coincap.io/assets/icons/${(coin).symbol.toLowerCase()}@2x.png`} width="30px"/>
             <h2>{coin.symbol}</h2>
@@ -76,7 +76,7 @@ const TradeGoods = () => {
           })}
         </div>
         <div className="flex justify-center mr-9" >
-        <button className="p-2 font-semibold" onClick={handleButtonClick}>Show More</button>
+        <button className="p-2 font-semibold mb-10" onClick={handleButtonClick}>Show More</button>
         </div>
         <div ref={bottomRef}></div>
      

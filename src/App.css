@@ -111,10 +111,14 @@ nav{
     background: url("https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100143.jpg?t=st=1708414942~exp=1708418542~hmac=56be5028047ca4761a5b5b0984a011f3f933cd4ddf11dbba93e4ff5c21fe6b3f&w=740") top center/cover;
 }
 
+.bs button{
+    @apply px-3 py-1 rounded-md bg-gray-800 text-white cursor-pointer; 
+    
+}
+
 .img2{
     margin-right: 3rem;
     border-radius: 50%;
-    border: 2px solid gray;
     width: 43px;
     height: 43px;
 }

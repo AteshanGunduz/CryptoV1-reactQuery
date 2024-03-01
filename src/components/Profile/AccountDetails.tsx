@@ -1,4 +1,18 @@
+import { useQuery } from "react-query";
+import { useSelector } from "react-redux";
+import { fetchAvatarSeed } from "../../api/api";
+
+
+
+
+
+
 const AccountDetails = () => {
+  const formData = useSelector((state: any) => state.formSlice.formData);
+  const {}:any = useQuery(["seed"], ()=>fetchAvatarSeed(formData.firstName.slice(0,1),formData.lastName.slice(0,1)))
+
+
+
   return (
     <div className="text-white w-full">
      

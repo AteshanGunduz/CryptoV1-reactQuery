@@ -33,8 +33,21 @@ const ChartNav = () => {
     <nav className=" flex items-center justify-between  font-semibold ">
       <div className="flex items-center gap-10 p-5">
         <div className="">
-        {Cid === "" ?   <button className="bg-gray-800 p-3 hover:bg-gray-700 rounded-xl flex w-28 justify-around" onClick={()=>handleCyrptoToggle()}><img src={`https://assets.coincap.io/assets/icons/${(cyrpto?.data[0]).symbol.toLowerCase()}@2x.png`} width="30px"/>
-            <h2>{cyrpto?.data[0].symbol}</h2></button> : <Cyrpto/>}
+        {Cid === "" ?   <div className="flex items-center gap-5"><button className="bg-gray-800 p-3 hover:bg-gray-700 rounded-xl flex w-28 justify-around" onClick={()=>handleCyrptoToggle()}><img src={`https://assets.coincap.io/assets/icons/${(cyrpto?.data[0]).symbol.toLowerCase()}@2x.png`} width="30px"/>
+            <h2>{cyrpto?.data[0].symbol}</h2></button>
+            <h2><p className="text-gray-200 text-xs">INDEX PRICE</p> ${parseFloat(cyrpto?.data[0].quotes.USD.price).toFixed(2)}</h2>   
+            <h2  className={String(cyrpto?.data[0].quotes.USD.percent_change_24h).includes("-") ? "text-red-500" : "text-green-500"}>
+              <p className="text-gray-200 text-xs">24HOUR CHANGE</p>{cyrpto?.data[0].quotes.USD.percent_change_24h}%</h2> 
+              <h2><p className="text-gray-200 text-xs">24HOUR VOLUME</p> ${parseFloat(cyrpto?.data[0].quotes.USD.volume_24h).toFixed(2)}</h2> 
+              <h2><p className="text-gray-200 text-xs">ATH PRICE</p> ${parseFloat(cyrpto?.data[0].quotes.USD.ath_price).toFixed(2)}</h2>
+
+              <h2  className={String(cyrpto?.data[0].quotes.USD.percent_change_12h).includes("-") ? "text-red-500" : "text-green-500"}>
+              <p className="text-gray-200 text-xs">12HOUR CHANGE</p>{cyrpto?.data[0].quotes.USD.percent_change_12h}%</h2> 
+              <h2  className={String(cyrpto?.data[0].quotes.USD.percent_change_6h).includes("-") ? "text-red-500" : "text-green-500"}>
+              <p className="text-gray-200 text-xs">6HOUR CHANGE</p>{cyrpto?.data[0].quotes.USD.percent_change_6h}%</h2> 
+              <h2  className={String(cyrpto?.data[0].quotes.USD.percent_change_1h).includes("-") ? "text-red-500" : "text-green-500"}>
+              <p className="text-gray-200 text-xs">1HOUR CHANGE</p>{cyrpto?.data[0].quotes.USD.percent_change_1h}%</h2>  </div>
+        : <Cyrpto/>}
       
     
 
