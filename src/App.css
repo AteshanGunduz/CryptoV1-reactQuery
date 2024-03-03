@@ -116,6 +116,10 @@ nav{
     
 }
 
+#btn{
+    @apply px-5 py-2 mb-2 rounded-md bg-blue-700 text-white text-sm cursor-pointer hover:bg-blue-600; 
+}
+
 .img2{
     margin-right: 3rem;
     border-radius: 50%;

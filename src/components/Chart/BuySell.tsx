@@ -16,7 +16,7 @@ const BuySell = () => {
 
 
   return (
-    <div className="bsell flex flex-col gap-5 items-center p-2 font-semibold text-sm">
+    <div className="bsell flex flex-col gap-5 items-center mt-2 p-2 font-semibold text-sm">
 
 {Cid === "" ? <h2 className="flex items-center gap-2"><img src={`https://assets.coincap.io/assets/icons/${(cyrpto?.data[0]).symbol.toLowerCase()}@2x.png`} width="30px"/><h2>{cyrpto?.data[0].symbol} / USDC</h2> </h2>:
 
