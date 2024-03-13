@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import { Link } from "react-router-dom"
 
 const Buy = () => {
   const focus = useRef<HTMLLabelElement | null>(null)
@@ -92,7 +93,7 @@ const Buy = () => {
       </div>
 
       <div className="text-center">
-        <button id="btn" className="bg-blue-600 p-2 rounded-xl">Add funds to contintue</button>
+        <Link to={"/profilemanager/deposit"}><button id="btn" className="bg-blue-600 p-2 rounded-xl">Add funds to contintue</button></Link>
       </div>
 
       </div>

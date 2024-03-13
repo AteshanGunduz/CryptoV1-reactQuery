@@ -33,15 +33,6 @@ const BuySell = () => {
    </div>
 
 
-
-
-
-
-
-
-
-
-
        </div>
   )
 }

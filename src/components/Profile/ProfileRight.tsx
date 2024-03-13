@@ -21,6 +21,11 @@ const ProfileRight = () => {
       <div>
       </div>
 
+      <div className="flex justify-between gap-10 w-full">
+        <div>Current Assets</div>
+        <div>Amount</div>
+      </div>
+
       <div className="mt-10 flex flex-col gap-5 w-full font-semibold text-sm">
       
       <div className="flex justify-between"><h2>Display Name</h2> <p>{formData.firstName} {formData.lastName}</p></div>
